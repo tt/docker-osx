@@ -26,7 +26,7 @@ DOCKER_IP="172.16.42.43"
 DOCKER_DOMAIN="localdocker"
 DOCKER_PORT="4243"
 
-DOCKER_VERSION="0.8.0"
+DOCKER_VERSION="$(docker version 2>/dev/null | head -n 1 | cut -d ' ' -f 3)"
 DOCKER_CLIENT_URL="http://get.docker.io/builds/Darwin/x86_64/docker-$DOCKER_VERSION.tgz"
 VAGRANT_BOX_URL="http://static.orchardup.com/binaries/vagrant/vagrant-docker-$DOCKER_VERSION-virtualbox.box"
 
